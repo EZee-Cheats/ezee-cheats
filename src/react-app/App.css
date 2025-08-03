@@ -1,45 +1,670 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --theme-dark-color-primary: var(--mantine-color-blue-7);
+  --theme-dark-color-secondary: var(--mantine-color-blue-6);
+  --theme-dark-color-tertiary: var(--mantine-color-blue-5);
+  --theme-light-color-primary: var(--mantine-color-blue-7);
+  --theme-light-color-secondary: var(--mantine-color-blue-6);
+  --theme-light-color-tertiary: var(--mantine-color-blue-5);
+  --theme-dark-color-contrast: var(--mantine-color-orange-7);
+  --theme-light-color-contrast: var(--mantine-color-orange-7);
+
+  --theme-dark-bg: var(--mantine-color-dark-8);
+  --theme-dark-card-bg: var(--mantine-color-dark-6);
+  --theme-dark-card-border: var(--mantine-color-dark-4);
+  --theme-dark-input-bg: var(--mantine-color-dark-8);
+  --theme-dark-input-border: var(--mantine-color-dark-4);
+  --theme-dark-text: var(--mantine-color-gray-3);
+  --theme-dark-subtext: var(--mantine-color-gray-6);
+  --theme-dark-white-on-color: var(--mantine-color-gray-1);
+  --theme-dark-white-on-color-dim: var(--mantine-color-gray-3);
+
+  --theme-light-bg: var(--mantine-color-gray-1);
+  --theme-light-card-bg: var(--mantine-color-gray-3);
+  --theme-light-card-border: var(--mantine-color-gray-5);
+  --theme-light-input-bg: var(--mantine-color-gray-1);
+  --theme-light-input-border: var(--mantine-color-gray-5);
+  --theme-light-text: var(--mantine-color-dark-6);
+  --theme-light-subtext: var(--mantine-color-dark-3);
+  --theme-light-white-on-color: var(--mantine-color-gray-1);
+  --theme-light-white-on-color-dim: var(--mantine-color-gray-3);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-.logo.cloudflare:hover {
-  filter: drop-shadow(0 0 2em #f6821faa);
+[data-theme="red"] {
+  --theme-dark-color-primary: var(--mantine-color-red-7);
+  --theme-dark-color-secondary: var(--mantine-color-red-6);
+  --theme-dark-color-tertiary: var(--mantine-color-red-5);
+  --theme-light-color-primary: var(--mantine-color-red-7);
+  --theme-light-color-secondary: var(--mantine-color-red-6);
+  --theme-light-color-tertiary: var(--mantine-color-red-5);
+  --theme-dark-color-contrast: var(--mantine-color-green-7);
+  --theme-light-color-contrast: var(--mantine-color-green-7);
+  --theme-color-0: var(--mantine-color-red-0);
+  --theme-color-1: var(--mantine-color-red-1);
+  --theme-color-2: var(--mantine-color-red-2);
+  --theme-color-3: var(--mantine-color-red-3);
+  --theme-color-4: var(--mantine-color-red-4);
+  --theme-color-5: var(--mantine-color-red-5);
+  --theme-color-6: var(--mantine-color-red-6);
+  --theme-color-7: var(--mantine-color-red-7);
+  --theme-color-8: var(--mantine-color-red-8);
+  --theme-color-9: var(--mantine-color-red-9);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+[data-theme="orange"] {
+  --theme-dark-color-primary: var(--mantine-color-orange-7);
+  --theme-dark-color-secondary: var(--mantine-color-orange-6);
+  --theme-dark-color-tertiary: var(--mantine-color-orange-5);
+  --theme-light-color-primary: var(--mantine-color-orange-7);
+  --theme-light-color-secondary: var(--mantine-color-orange-6);
+  --theme-light-color-tertiary: var(--mantine-color-orange-5);
+  --theme-dark-color-contrast: var(--mantine-color-blue-7);
+  --theme-light-color-contrast: var(--mantine-color-blue-7);
+  --theme-color-0: var(--mantine-color-orange-0);
+  --theme-color-1: var(--mantine-color-orange-1);
+  --theme-color-2: var(--mantine-color-orange-2);
+  --theme-color-3: var(--mantine-color-orange-3);
+  --theme-color-4: var(--mantine-color-orange-4);
+  --theme-color-5: var(--mantine-color-orange-5);
+  --theme-color-6: var(--mantine-color-orange-6);
+  --theme-color-7: var(--mantine-color-orange-7);
+  --theme-color-8: var(--mantine-color-orange-8);
+  --theme-color-9: var(--mantine-color-orange-9);
+}
+
+[data-theme="yellow"] {
+  --theme-dark-color-primary: var(--mantine-color-yellow-7);
+  --theme-dark-color-secondary: var(--mantine-color-yellow-6);
+  --theme-dark-color-tertiary: var(--mantine-color-yellow-5);
+  --theme-light-color-primary: var(--mantine-color-yellow-7);
+  --theme-light-color-secondary: var(--mantine-color-yellow-6);
+  --theme-light-color-tertiary: var(--mantine-color-yellow-5);
+  --theme-dark-color-contrast: var(--mantine-color-violet-7);
+  --theme-light-color-contrast: var(--mantine-color-violet-7);
+  --theme-color-0: var(--mantine-color-yellow-0);
+  --theme-color-1: var(--mantine-color-yellow-1);
+  --theme-color-2: var(--mantine-color-yellow-2);
+  --theme-color-3: var(--mantine-color-yellow-3);
+  --theme-color-4: var(--mantine-color-yellow-4);
+  --theme-color-5: var(--mantine-color-yellow-5);
+  --theme-color-6: var(--mantine-color-yellow-6);
+  --theme-color-7: var(--mantine-color-yellow-7);
+  --theme-color-8: var(--mantine-color-yellow-8);
+  --theme-color-9: var(--mantine-color-yellow-9);
+}
+
+[data-theme="green"] {
+  --theme-dark-color-primary: var(--mantine-color-green-7);
+  --theme-dark-color-secondary: var(--mantine-color-green-6);
+  --theme-dark-color-tertiary: var(--mantine-color-green-5);
+  --theme-light-color-primary: var(--mantine-color-green-7);
+  --theme-light-color-secondary: var(--mantine-color-green-6);
+  --theme-light-color-tertiary: var(--mantine-color-green-5);
+  --theme-dark-color-contrast: var(--mantine-color-red-8);
+  --theme-light-color-contrast: var(--mantine-color-red-7);
+  --theme-color-0: var(--mantine-color-green-0);
+  --theme-color-1: var(--mantine-color-green-1);
+  --theme-color-2: var(--mantine-color-green-2);
+  --theme-color-3: var(--mantine-color-green-3);
+  --theme-color-4: var(--mantine-color-green-4);
+  --theme-color-5: var(--mantine-color-green-5);
+  --theme-color-6: var(--mantine-color-green-6);
+  --theme-color-7: var(--mantine-color-green-7);
+  --theme-color-8: var(--mantine-color-green-8);
+  --theme-color-9: var(--mantine-color-green-9);
+}
+
+[data-theme="blue"] {
+  --theme-dark-color-primary: var(--mantine-color-blue-7);
+  --theme-dark-color-secondary: var(--mantine-color-blue-6);
+  --theme-dark-color-tertiary: var(--mantine-color-blue-5);
+  --theme-light-color-primary: var(--mantine-color-blue-7);
+  --theme-light-color-secondary: var(--mantine-color-blue-6);
+  --theme-light-color-tertiary: var(--mantine-color-blue-5);
+  --theme-dark-color-contrast: var(--mantine-color-orange-7);
+  --theme-light-color-contrast: var(--mantine-color-orange-7);
+  --theme-color-0: var(--mantine-color-blue-0);
+  --theme-color-1: var(--mantine-color-blue-1);
+  --theme-color-2: var(--mantine-color-blue-2);
+  --theme-color-3: var(--mantine-color-blue-3);
+  --theme-color-4: var(--mantine-color-blue-4);
+  --theme-color-5: var(--mantine-color-blue-5);
+  --theme-color-6: var(--mantine-color-blue-6);
+  --theme-color-7: var(--mantine-color-blue-7);
+  --theme-color-8: var(--mantine-color-blue-8);
+  --theme-color-9: var(--mantine-color-blue-9);
+}
+
+[data-theme="violet"] {
+  --theme-dark-color-primary: var(--mantine-color-violet-7);
+  --theme-dark-color-secondary: var(--mantine-color-violet-6);
+  --theme-dark-color-tertiary: var(--mantine-color-violet-5);
+  --theme-light-color-primary: var(--mantine-color-violet-7);
+  --theme-light-color-secondary: var(--mantine-color-violet-6);
+  --theme-light-color-tertiary: var(--mantine-color-violet-5);
+  --theme-dark-color-contrast: var(--mantine-color-yellow-7);
+  --theme-light-color-contrast: var(--mantine-color-yellow-7);
+  --theme-color-0: var(--mantine-color-violet-0);
+  --theme-color-1: var(--mantine-color-violet-1);
+  --theme-color-2: var(--mantine-color-violet-2);
+  --theme-color-3: var(--mantine-color-violet-3);
+  --theme-color-4: var(--mantine-color-violet-4);
+  --theme-color-5: var(--mantine-color-violet-5);
+  --theme-color-6: var(--mantine-color-violet-6);
+  --theme-color-7: var(--mantine-color-violet-7);
+  --theme-color-8: var(--mantine-color-violet-8);
+  --theme-color-9: var(--mantine-color-violet-9);
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-horizontal {
+  height: 65px;
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  /* scrollbar-color: light-dark(var(--theme-dark-white-on-color),var(--theme-light-white-on-color)) light-dark(var(--theme-light-color-primary),var(--theme-dark-color-primary)); */
+}
+
+.navbarDivider {
+  border-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+}
+
+.navbarHeader {
+  /* margin-left: 1rem; */
+  position: absolute;
+}
+
+.navbarMain {}
+
+@media (max-width: 574px) {
+  .navbarMain {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.navbarHamburger {
+  display: none;
+}
+
+@media (max-width: 574px) {
+  .navbarHamburger {
+    width: 30px;
+    height: 30px;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: light-dark(var(--theme-dark-white-on-color), var(--theme-light-white-on-color));
+    background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.navbarHamburger:hover {
+  background-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+}
+
+.navbarFooter {
+  padding-right: 1rem;
+  position: absolute;
+  right: 0;
+}
+
+.navbarButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbarButton {}
+}
+
+.navbarHomeButton {
+  width: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbarHomeButton {}
+}
+
+.navbarLink {
+  height: 30px;
+  gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: light-dark(var(--theme-dark-white-on-color), var(--theme-light-white-on-color));
+  background-color: var(--theme-light-color-primary);
+}
+
+@media (max-width: 900px) {
+  .navbarLink {
+    font-size: 0;
+    gap: 0;
   }
 }
 
-.card {
-  padding: 2em;
+@media (max-width: 900px) {
+  .navbarDropdownChevron {
+    display: none;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+.navbarLink:hover {
+  text-decoration: underline;
+  /* 3background-color: var(--theme-light-color-tertiary); */
+}
+
+.navbarLink[data-active],
+.navbarLink[data-active]:hover {
+  background-color: light-dark(var(--theme-dark-white-on-color), var(--theme-light-white-on-color));
+  color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.navbarMenuDropdown {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.navbarMenuItem {
+  color: light-dark(var(--theme-dark-white-on-color), var(--theme-light-white-on-color));
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.navbarMenuItem:hover {
+  background-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+}
+
+.navbarButton {
+  color: light-dark(var(--theme-dark-white-on-color), var(--theme-light-white-on-color));
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.navbarButton:hover {
+  background-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+}
+
+.navbarButton[data-active],
+.navbarButton[data-active]:hover {
+  background-color: light-dark(var(--theme-dark-white-on-color), var(--theme-light-white-on-color));
+  color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.footer-horizontal {
+  background-color: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+  display: flex;
+}
+
+.footerHeader {
+  margin-left: 1rem;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.footerMain {}
+
+.footerFooter {
+  margin-right: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.footerLink {
+  cursor: pointer;
+}
+
+.footerText {}
+
+@media (max-width: 900px) {
+  .footerFeatureText {
+    display: none;
+  }
+}
+
+@media (max-width: 574px) {
+  .footerFeatureIcons {
+    display: none;
+  }
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  /* 3background-color: var(--theme-light-color-tertiary); */
+}
+
+.container-vertical {
+  background-color: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+  padding: 1rem;
+  flex: 1;
+}
+
+.content {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  scrollbar-color: light-dark(var(--theme-light-input-border), var(--theme-dark-input-border)) light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+}
+
+.container-floating {
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.auto-height-card {
+  flex: 1;
+  min-height: fit-content;
+}
+
+.auto-width-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.auto-width-box-fit-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+  min-height: fit-content;
+}
+
+.auto-width-card {
+  flex: 1;
+  min-height: fit-content;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.log-entry {
+  padding: 8px;
+  background-color: light-dark(var(--mantine-color-gray-1), var(--theme-dark-bg));
+  border-radius: 4px;
+  border: 1px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border));
+}
+
+.log-entry {
+  padding: 8px;
+  background-color: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+  border-radius: 4px;
+  border: 1px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border));
+}
+
+.container-horizontal {
+  background-color: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+  scrollbar-color: light-dark(var(--theme-light-input-border), var(--theme-dark-input-border)) light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+}
+
+.scroll-container {
+  scrollbar-color: light-dark(var(--theme-light-input-border), var(--theme-dark-input-border)) light-dark(var(--theme-light-card-bg), var(--theme-dark-card-bg));
+}
+
+.mantine-Card-root {
+  background-color: light-dark(var(--theme-light-card-bg), var(--theme-dark-card-bg));
+  border: 1px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border));
+}
+
+.mantine-Accordion-item {
+  background-color: light-dark(var(--theme-light-card-bg), var(--theme-dark-card-bg));
+  border: 1px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border));
+}
+
+.mantine-Accordion-content {
+  /* background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  border: 1px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border)); */
+}
+
+.mantineCardHighlight {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  border: 1px solid light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+}
+
+.mantineButtonHighlight {
+  background-color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+  color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  border: 2px solid light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantineButtonHighlight:hover {
+  background-color: light-dark(var(--theme-light-white-on-color-dim), var(--theme-dark-white-on-color-dim));
+  color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  border: 2px solid light-dark(var(--theme-light-white-on-color-dim), var(--theme-dark-white-on-color-dim));
+}
+
+.mantineButtonDefaultColor:hover {
+  border-color: transparent;
+}
+
+.mantineButtonHighlightOutline {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+  border: 2px solid light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantineButtonHighlightOutline:hover {
+  background-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+  border: 2px solid light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantineTextHighlight {
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantine-ActionIcon-root[data-variant="filled"] {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-ActionIcon-root[data-variant="filled"]:hover {
+  background-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+  border-color: transparent;
+}
+
+.mantine-ActionIcon-root[data-variant="outline"] {
+  border-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-ActionIcon-root[data-variant="outline"]:hover {
+  background-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+  border-color: light-dark(var(--theme-light-color-tertiary), var(--theme-dark-color-tertiary));
+}
+
+.mantine-ActionIcon-root[data-variant="subtle"] {
+  color: light-dark(var(--theme-light-text), var(--theme-dark-text));
+}
+
+.mantine-ActionIcon-root[data-variant="subtle"]:hover {
+  background-color: transparent;
+  border: 1px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border));
+}
+
+.mantine-Button-root:hover {}
+
+.mantine-Button-root[data-variant="filled"] {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantine-Button-root[data-variant="filled"]:hover {
+  border-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  background-color: light-dark(var(--theme-light-color-secondary), var(--theme-dark-color-secondary));
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantine-Button-root[data-variant="filled"]:disabled {
+  background-color: light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantine-Button-root[data-variant="filled"][data-loading=true] {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+}
+
+.mantine-Button-root[data-variant="outline"] {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+}
+
+.mantine-Button-root[data-variant="outline"]:disabled {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 2px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border));
+}
+
+.mantine-TextInput-input {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 1px solid light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+}
+
+.mantine-TextInput-input:focus {
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-PasswordInput-input {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 1px solid light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+}
+
+.mantine-PasswordInput-root:focus-within .mantine-PasswordInput-input {
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Select-input {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 1px solid light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+}
+
+.mantine-Select-input:focus {
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Select-dropdown {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Select-option:hover {
+  color: light-dark(var(--theme-light-white-on-color), var(--theme-dark-white-on-color));
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-NumberInput-input {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 1px solid light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+}
+
+.mantine-NumberInput-input:focus {
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Slider-bar {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Slider-thumb {
+  background-color: light-dark(var(--theme-dark-white-on-color), var(--theme-dark-white-on-color));
+  border-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Slider-mark {
+  border-color: light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+}
+
+.mantine-Slider-root:focus-within .mantine-Slider-mark {
+  border-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Slider-mark[data-filled] {
+  border-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Slider-track::before {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 1px solid light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+}
+
+.mantine-Slider-root:focus-within .mantine-Slider-track::before {
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Slider-markLabel {
+  color: light-dark(var(--theme-light-subtext), var(--theme-dark-subtext));
+}
+
+.mantine-Switch-root:not([data-checked]) .mantine-Switch-track {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+  border: 1px solid light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
+}
+
+.mantine-Switch-root[data-checked] .mantine-Switch-track {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Switch-root:focus-within:not([data-checked]) .mantine-Switch-track {
+  border: 1px solid light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.mantine-Switch-root:not([data-checked]) .mantine-Switch-thumb::before {
+  background-color: light-dark(var(--theme-light-input-bg), var(--theme-dark-input-bg));
+}
+
+.mantine-Switch-root[data-checked] .mantine-Switch-thumb::before {
+  background-color: light-dark(var(--theme-light-color-primary), var(--theme-dark-color-primary));
+}
+
+.theme-popover {
+  background-color: light-dark(var(--theme-light-card-bg), var(--theme-dark-card-bg));
+  border: 1px solid light-dark(var(--theme-light-card-border), var(--theme-dark-card-border));
+}
+
+.theme-color-box {
+  border: 2px solid light-dark(transparent, transparent);
+}
+
+.theme-color-box:hover {
+  border-color: light-dark(var(--theme-light-input-border), var(--theme-dark-input-border));
 }
